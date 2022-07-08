@@ -24,6 +24,7 @@ class CustodianPolicyTest(unittest.TestCase):
         config = Config.empty(**args)
 
         # https://cloudcustodian.io/docs/aws/aws-modes.html
+        # modify input to "pull" so that also cloudtrail- and cloudwatch-based functions can be executed/tested locally
         with patch("c7n.policy.Policy.execution_mode", new_callable=PropertyMock) as em:
             em.return_value = "pull"
             run(config)
