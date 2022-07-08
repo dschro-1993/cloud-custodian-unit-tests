@@ -1,0 +1,15 @@
+policies:
+  - name: s3-mark-unencrypted-buckets
+    description: Mark unencrypted S3 buckets
+    resource: s3
+    mode:
+      type: periodic
+      role: arn:aws:iam::{account_id}:role/cc-test
+      schedule: "rate(1 day)"
+    filters:
+      - type: bucket-encryption
+        state: False
+    actions:
+      - type: tag
+        key: unencrypted
+        value: "yes"
