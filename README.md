@@ -1,8 +1,8 @@
-# cc-test
+# c7n-unit-tests
 
 Cloud Custodian docs ==> [here](https://cloudcustodian.io/docs/index.html)
 
-Thanks to [Zendesk](https://zendesk.engineering/validating-cloud-custodian-on-aws-with-moto-203a30ee5505) for this brilliant idea.
+Thanks to Zendesk for this brilliant [idea](https://zendesk.engineering/validating-cloud-custodian-on-aws-with-moto-203a30ee5505) how to unit-test c7n policies.
 
 ## Prerequisites
 
